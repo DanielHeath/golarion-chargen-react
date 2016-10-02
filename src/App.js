@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import './App.css';
-import Card from './Card.js';
+import Cards from './Cards.js';
 import {Generate} from "./models";
 import type {Character, Component} from "./models/types";
 
@@ -37,15 +37,7 @@ export default class App extends React.Component {
         <div className="App-header">
           <h2>Welcome to React</h2>
         </div>
-        <div className="options">
-          {this.state.cards.map((card, idx) =>
-            <Card
-              {...card}
-              key={idx}
-              onClick={() => this.pickCard(card)}
-            />
-          )}
-        </div>
+
         <div className="character">
           {values(char).map((component, idx) =>
             <div
@@ -63,6 +55,12 @@ export default class App extends React.Component {
 
           )}
         </div>
+
+        <Cards
+          options={this.state.cards}
+          onSelect={this.pickCard}
+        />
+
       </div>
     );
   }

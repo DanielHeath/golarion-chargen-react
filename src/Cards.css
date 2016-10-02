@@ -1,0 +1,25 @@
+
+.cards-enter, .cards-appear {
+  opacity: 0.01;
+}
+
+.cards-appear.cards-appear-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.cards-enter.cards-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.cards-leave {
+  opacity: 1;
+}
+
+.cards-leave.cards-leave-active {
+  opacity: 0.01;
+  transform: translateX(500px);
+  transition: all 200ms ease-in;
+}
+

@@ -18,8 +18,8 @@ export default class Card extends React.Component {
         </div>
         { this.props.body &&
           [
-            <hr />,
-            <div className="body">{this.props.body}</div>,
+            <hr key={0} />,
+            <div key={1} className="body">{this.props.body}</div>,
           ]
         }
       </div>
