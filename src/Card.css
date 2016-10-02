@@ -1,0 +1,42 @@
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.options .card {
+  background-color: #f6f;
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 350px;
+
+  padding: 10px 0;
+  margin: 10px;
+}
+
+@media screen and (min-width: 380px) {
+  .options .card {
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+.options .card .title {
+  text-align: center;
+  line-height: 2em;
+  font-weight: bold;
+}
+
+.options .card .slot::before {
+  content: ' (';
+}
+
+.options .card .slot::after {
+  content: ') ';
+}
+
+
+.options .card .body {
+  text-align: center;
+}
